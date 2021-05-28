@@ -45,5 +45,5 @@ else:
     vencedor = 2
 
 os.system('cls||clear')
-print(f'JOGO FINALIZADO, O JOGADOR {vencedor} VENCEU!!!')
+print(f'JOGO FINALIZADO, O JOGADOR {vencedor} VENCEU!!!\n')
 jogo.exibirTabuleiro()  
