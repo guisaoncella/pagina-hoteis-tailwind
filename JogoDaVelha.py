@@ -32,7 +32,7 @@ class JogoDaVelha:
     
     def consultadorVencedor(self):
         return 77
-            
+           
     def verificarVencedor(self, jogador = 66):
         if jogador == 66:
             if self.verificarVencedor(77):
@@ -59,7 +59,7 @@ class JogoDaVelha:
             return True
         
         return False
-    
+
     def valorCasa(self, i, j):
         return self.tabuleiro[i][j]
     
@@ -68,8 +68,6 @@ class JogoDaVelha:
             return True
         else:
             return False
-    
-    
     
     def gravarCasa(self, i, j, jogador):
         if i > 2 or j > 2:
@@ -82,4 +80,19 @@ class JogoDaVelha:
             elif jogador == 2:
                 self.tabuleiro[i][j] = 77    
             return True 
+    
+    #verifica se todas as casas estão preenchidas
+    def verificarTodasCasas(self):
+        total = 0
+        for i in range (0,3):
+            for j in range (0,3):
+                if self.verificarCasa(i, j, 66) or self.verificarCasa(i, j, 77):
+                    total += 1
+                    continue
+                else:
+                    break
+        if total == 9:
+            return True
+        else:
+            return False
         

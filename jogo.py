@@ -10,9 +10,9 @@ import os
 
 jogo = v.JogoDaVelha()
 
-vencedor = 0
+parar = 0
 jogador = 1
-while vencedor == 0:
+while parar == 0:
     os.system('cls||clear')
     jogo.exibirTabuleiro() 
     print(f'\nJogador {jogador} escolha uma casa: ', end="")
@@ -35,15 +35,18 @@ while vencedor == 0:
         sleep(1)
         continue
     
-    vencedor = jogo.verificarVencedor()
-    
     jogador = (2 if jogador == 1 else 1)
-
+    
+    if jogo.verificarVencedor() or jogo.verificarTodasCasas():
+        parar = 1
+    
 if jogo.vencedor == 66:
-    vencedor = 1
+    tVencedor = "O JOGADOR 1 VENCEU"
+elif jogo.vencedor == 77:
+    tVencedor = "O JOGADOR 2 VENCEU"
 else:
-    vencedor = 2
+    tVencedor = "EMPATE"
 
 os.system('cls||clear')
-print(f'JOGO FINALIZADO, O JOGADOR {vencedor} VENCEU!!!\n')
+print(f'JOGO FINALIZADO, {tVencedor}!!!\n')
 jogo.exibirTabuleiro()  
