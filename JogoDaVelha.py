@@ -4,6 +4,11 @@
 #https://www.linkedin.com/in/guilherme-saoncella/
 #discord: puwer#9470
 
+GREEN = "\033[0;32m"
+YELLOW = '\033[33m'
+FIM = "\033[0;0m"
+SEPARADOR = "\033[1;31m | \033[0;0m"
+
 class JogoDaVelha:
     def __init__(self, jogador1 = "Jogador 1", jogador2 = "Jogador 2", tabuleiro = [[1,2,3],[4,5,6],[7,8,9]]):
         self.jogador1 = jogador1
@@ -17,12 +22,12 @@ class JogoDaVelha:
         for i in range (0,3):
             for j in range (0,3):
                 if self.tabuleiro[i][j] == 66:
-                    x = "X"
+                    x = GREEN+"X"
                 elif self.tabuleiro[i][j] == 77:
-                    x = "O"
+                    x = YELLOW+"O"
                 else:
                     x = self.tabuleiro[i][j]
-                print(f'  |  {x}  |  ', end="")
+                print(f'{SEPARADOR}{x}{SEPARADOR}', end="")
             print('\n')
     
     def consultadorVencedor(self):
