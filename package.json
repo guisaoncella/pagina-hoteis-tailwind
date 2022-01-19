@@ -1,0 +1,23 @@
+{
+  "name": "pagina-hoteis-tailwind",
+  "version": "1.0.0",
+  "description": "exemplo de site de hoteis com tailwind",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guisaoncella/pagina-hoteis-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guisaoncella/pagina-hoteis-tailwind/issues"
+  },
+  "homepage": "https://github.com/guisaoncella/pagina-hoteis-tailwind#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.15"
+  }
+}
