@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .link-menu {
+        @apply text-sm text-gray-600 hover:text-gray-800 hover:underline;
+    }
+
+    .div-container{
+        @apply container mx-auto px-4 flex items-center;
+    }
+
+    .form-select{
+        @apply bg-gray-50 px-3 py-2 rounded text-gray-500;
+    }
+
+    .form-button{
+        @apply text-yellow-900 bg-yellow-500 px-3 py-2 font-medium rounded;
+    }
+}
