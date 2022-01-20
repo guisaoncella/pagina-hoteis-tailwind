@@ -18,4 +18,8 @@
     .form-button{
         @apply text-yellow-900 bg-yellow-500 px-3 py-2 font-medium rounded;
     }
+
+    .div-featured{
+        @apply text-sm text-gray-400 font-medium;
+    }
 }
