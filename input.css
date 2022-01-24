@@ -16,7 +16,7 @@
     }
 
     .form-button{
-        @apply text-yellow-900 bg-yellow-500 px-3 py-2 font-medium rounded;
+        @apply text-yellow-900 bg-yellow-500 px-3 py-2 font-medium rounded hover:bg-yellow-600;
     }
 
     .div-featured{
